@@ -338,6 +338,7 @@ def parse_mtl(mtl, resolver=None):
                 # load the bytes into a PIL image
                 # an image file name
                 material["image"] = Image.open(util.wrap_as_stream(file_data))
+                material["image_name"] = file_name
             except BaseException:
                 log.debug("failed to load image", exc_info=True)
 
